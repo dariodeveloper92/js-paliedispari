@@ -4,6 +4,7 @@
 //Chiedere all’utente di inserire una parola
 var parola = prompt('Inserire una parola');
 
+//APPLICARE SPLIT
 var palindroma = ['o', 'r', 'o'];
 
 
@@ -11,12 +12,14 @@ console.log(palindroma);
 
 //Creare una funzione per capire se la parola inserita è palindroma
 function parolaPalindroma(parola) {
-    if(parola == palindroma) {
+    if(parola == palindroma) { //NON HA SENSO
         return 'Parola palindorma';
     }
         return 'Parola non palindorma';
 }
 */
+
+
 
 
 //ESERCIZIO 2 - Pari e Dispari-------------------------------------------------------------------------------------------------------------------------------------
@@ -30,18 +33,22 @@ console.log(numeroUtente);
 //Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 var min = 1;
 var max = 5;
+var numeroPc = rndNumber(min, max);
 function rndNumber(min, max) {
     //var rndNumber = (min, max)
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
 //Sommiamo i due numeri
+var somma = sommaNumeri(numeroUtente, numeroPc);
 function sommaNumeri(numeroUtente, rndNumber) {
     var risultato = numeroUtente + rndNumber;
     return risultato;
 }
+
 //Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-function pariDispari(risultato) {
+var risultato = pariDispari(somma);
+function pariDispari(num) {
     if(num % 2 == 0) {
         return 'pari';
     }
