@@ -1,25 +1,36 @@
 //ESERCIZIO 1 - Palidroma-------------------------------------------------------------------------------------------------------------------------------------
-
-/*
 //Chiedere all’utente di inserire una parola
 var parola = prompt('Inserire una parola');
 
-//APPLICARE SPLIT
-var palindroma = ['o', 'r', 'o'];
 
-
-console.log(palindroma);
-
+//MODO 1
 //Creare una funzione per capire se la parola inserita è palindroma
-function parolaPalindroma(parola) {
-    if(parola == palindroma) { //NON HA SENSO
-        return 'Parola palindorma';
-    }
-        return 'Parola non palindorma';
+var isPalindrome = (inStr) => {
+    inStr = inStr.replace(/\W/g, '');
+    inStr = inStr.toLowerCase();
+
+    return inStr === inStr.split('').reverse().join('');
 }
-*/
+
+console.log(isPalindrome(parola));
 
 
+
+//MODO 2
+//Creare una funzione per capire se la parola inserita è palindroma
+function palindrome(str) {
+    var reg = /[\W_]/g;
+
+    var smallStr = str.toLowerCase().replace(reg, '');
+
+    var reversed = smallStr.split('').reverse().join('');
+    //Dichiariamo se la parola è palindroma.
+    if(reversed === smallStr) return true;
+
+    return false;
+}
+
+console.log(palindrome(parola));
 
 
 //ESERCIZIO 2 - Pari e Dispari-------------------------------------------------------------------------------------------------------------------------------------
