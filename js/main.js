@@ -33,6 +33,23 @@ function palindrome(str) {
 console.log(palindrome(parola));
 
 
+//MODO 3
+//Creare una funzione per capire se la parola inserita è palindroma
+var parolaInversa = palindroma(parola);
+
+if(parola == parolaInversa) {
+    console.log('la parola è palindroma');
+} else {
+    console.log('la parola non è palindroma');
+}
+
+function palindroma (strg) {
+var strInversa = strg.split('').reverse().join('').toLowerCase();
+
+return strInversa;
+}
+
+
 //ESERCIZIO 2 - Pari e Dispari-------------------------------------------------------------------------------------------------------------------------------------
 
 //L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
@@ -66,6 +83,16 @@ function pariDispari(num) {
     //Se un numero è dispari stampare "dispari"
         return 'dispari';
 }
+
+/* (Altra Soluzione) 
+fuction isEven() {
+        if(num % 2 == 0) {
+        return true;
+    }
+    //Se un numero è dispari stampare "dispari"
+        return false;
+}
+*/
 //Dichiariamo chi ha vinto.
 if (pari_dispari == risultato)
 {
